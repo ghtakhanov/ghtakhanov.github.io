@@ -1,0 +1,14 @@
+<div class="container-fluid reference">
+  <div class="row">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" class="animated fadeIn carousel">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}">
+
+          <div class="carousel-caption box  shadow1  box1">
+            <!-- <h4>Slide {{slide.id+1}}</h4> -->
+            <h4>{{slide.text}}</h4>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

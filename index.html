@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Levels</title>
+  <base href="/">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bng-selector/dist/bng-selector.min.css" />
+  <link rel="stylesheet" href="bower_components/angularMultipleSelect/build/multiple-select.min.css" />
+  <link rel="stylesheet" href="bower_components/w11k-select/dist/w11k-select.css" />
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="bower_components/reset-css/reset.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- Custom styles for this template -->
+  <link href="styles/styles.css" rel="stylesheet">
+  <script src="scripts/ie-emulation-modes-warning.js"></script>
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+  <link rel="stylesheet" href="bower_components/angular-bootstrap3-datepicker/dist/ng-bs3-datepicker.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+  <link rel="stylesheet" href="bower_components/angular-datepicker/dist/angular-datepicker.css" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="bower_components/nanoscroller/bin/css/nanoscroller.css" />
+
+
+</head>
+
+<body ng-app="erdbApp" data-spy="scroll" data-target=".navbar" data-offset="15">
+  <nav class="navbar navbar-default" style="z-index:1000;" ng-controller="AboutCtrl as about">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" style="color:#8bb91c; font-weight:bold; font-size:16pt;" ui-sref="index"><span class="glyphicon glyphicon-leaf"></span > LEVELS</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="" ui-sref="aboutUs">О нас</a>
+          </li>
+          <li>
+            <a href="" ui-sref="cost" >Цены</a>
+          </li>
+          <li>
+            <a href="" ui-sref="contacts" >Контакты</a>
+          </li>
+
+
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div ui-view=""></div>
+
+  <!-- </div> -->
+
+
+
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+  <script src="bower_components/bng-selector/dist/bng-selector.min.js"></script>
+  <script src="bower_components/amitava82-angular-multiselect/dist/multiselect-tpls.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angularMultipleSelect/build/multiple-select.min.js"></script>
+  <script src="bower_components/w11k-dropdownToggle/dist/w11k-dropdownToggle.js"></script>
+  <script src="bower_components/angular-bindonce/bindonce.js"></script>
+  <script src="bower_components/w11k-select/dist/w11k-select.js"></script>
+  <script src="bower_components/w11k-select/dist/w11k-select.tpl.js"></script>
+  <!-- endbower -->
+  <!-- <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script> -->
+  <script src="bower_components/moment/locale/ru.js"></script>
+  <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+  <script src="bower_components/nginfiniteScroll/build/ng-infinite-scroll.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
+  <script src="bower_components/angular-nanoscroller/scrollable.js"></script>
+  <script src="bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.js"></script>
+  <script src="bower_components/angular-bootstrap3-datepicker/dist/ng-bs3-datepicker.js"></script>
+
+
+  <!-- endbuild -->
+
+  <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="lib/jquery.nicescroll.min.js"></script>
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/cost.js"></script>
+
+  <!-- endbuild -->
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "bng-selector",
+  "version": "1.7.0",
+  "homepage": "https://github.com/brunokrebs/bng-selector",
+  "authors": [
+    "Bruno Krebs <bruno.krebs@tecsinapse.com.br>"
+  ],
+  "description": "Angular select component",
+  "main": [
+    "./dist/bng-selector.min.css",
+    "./dist/bng-selector.min.js"
+  ],
+  "keywords": [
+    "angular",
+    "select",
+    "component",
+    "filter"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

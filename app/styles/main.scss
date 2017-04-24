@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  outline: 0;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: rgba($c-black, 0);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family;
+  touch-action: manipulation;
+  font-size: $font-size-default;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  background: $background-body;
+  font-size: 100%;
+  min-height: 100%;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-weight: bold;
+}
+
+.mobile {
+  display: none;
+}
+
+.push-left {
+  float: left !important;
+}
+
+.push-right {
+  float: right !important;
+}
+
+.main__title {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 3rem;
+  color: $c-brand;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ngdialog-content {
+  width: 950px !important;
+}
+
+.custom-width-wide .ngdialog-content {
+  width: 85% !important; }
+
+.custom-width-normal .ngdialog-content {
+  width: 60% !important; }
+
+.custom-width-narrow .ngdialog-content {
+  width: 40% !important; }
+
+#loader-spinn {
+  width: 30px;
+  transform: translate(0px,7px);
+}
+
+.layout-center-wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.ngdialog.ngdialog-theme-default {
+  padding-bottom: 0;
+  padding-top: 55px;
+}
+
+.form-item-container .list-inline li span.remove {
+  color: #337AB7;
+}
+
+// Block level inputs
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;        // Make inputs at least the height of their button counterpart
+  box-sizing: border-box; // Makes inputs behave like true block-level elements
+}
+
+.btn-group {
+  display: flex;
+}
+
+.label {
+  margin-right: 2px;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  background: #ffffff;
+  padding: 0.2em;
+}
+
+.form-item-container .list-inline li span {
+  border: none;
+	padding: 2px;
+	background: #5cb85c;
+	color: white;
+	font-size: small;
+}
+
+.form-item-container .list-inline li span.remove {
+	color: white !important;
+}
+
+
+
+//  Диабет
+.diabet-human-main
+{
+  margin-top: 40px;
+  padding: 10px 10px;
+}
+.diabet-human-search
+{
+    float: left;
+    border: 1px solid $c-gray;
+    height: 40px;
+    background: $c-white;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 58px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+
+
+    ._prik_kod
+    {
+      width: 20%;
+      margin-right: 1%;
+    }
+    ._fullname
+    {
+      width: 43%;
+      margin-right: 1%;
+    }
+    ._nomkart
+    {
+      width: 20%;
+      margin-right: 1%;
+    }
+    ._search-button
+    {
+      width: 10%;
+    }
+}
+.diabet-human-list
+{
+  float: left;
+  border: 1px solid $c-gray;
+  height: 700px;
+  background: $c-white;
+  border-radius: 4px;
+  width: 34%;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+.diabet-human-cards
+{
+  float: right;
+  border: 1px solid $c-gray;
+  height: 700px;
+  background: $c-white;
+  border-radius: 4px;
+  width: 65%;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+.diabet-card
+{
+  float: right;
+  border: 1px solid $c-gray;
+  height: 700px;
+  background: $c-white;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+
+  .diabet-card-menu
+  {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+    height: 100%;
+  }
+
+  .diabet-card-content
+  {
+    float: right;
+    width: 84%;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 15px rgba(0, 0, 0, 0.15);
+    height: 100%;
+  }
+}
+.diabet-caption
+{
+  font-family: Calibri;
+  font-size: 12pt;
+  margin-left: 10px;
+}
+
+.navbarstyle {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+// .navbar-inverse {
+//   background-color: #337ab7 !important;
+// }
+
+// .navbar-inverse .navbar-brand {
+//   font-weight: 500 !important;
+//   font-size: x-large;
+// }
+/*# sourceMappingURL=data:application/json;base64,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RDtJQUNFLHFDQUFvQixDQUFBLG9CQUFBO0NBQ3JCO0FBQ0Qsb0JBQUM7QUFDRCwwQ0FBQTtBQUNBLElBQUE7O0FBRUEsa0NBQWtDO0FBQ2xDLGlDQUFBO0FBQ0Esd0JBQUE7QUFDQSxJQUFBIiwiZmlsZSI6Im1haW4uc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gIG1hcmdpbjogMDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIGZvbnQtc2l6ZTogMTAwJTtcclxuICBvdXRsaW5lOiAwO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTtcclxuICAtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6IHJnYmEoJGMtYmxhY2ssIDApO1xyXG59XHJcbiosXHJcbjphZnRlcixcclxuOmJlZm9yZSB7XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5odG1sIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgZm9udC1mYW1pbHk6ICRmb250LWZhbWlseTtcclxuICB0b3VjaC1hY3Rpb246IG1hbmlwdWxhdGlvbjtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuYm9keSB7XHJcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xyXG4gIGJhY2tncm91bmQ6ICNGNUY1RjU7XHJcbiAgZm9udC1zaXplOjEwMCVcclxufVxyXG5oMntcclxuICBmb250LXNpemU6ICRmb250LXNpemUtaDI7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuLm1vYmlsZSB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLnB1c2gtbGVmdHtcclxuICBmbG9hdDogbGVmdCAhaW1wb3J0YW50O1xyXG59XHJcbi5wdXNoLXJpZ2h0e1xyXG4gIGZsb2F0OiByaWdodCAhaW1wb3J0YW50O1xyXG59XHJcbi5tYWluX190aXRsZXtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgbWFyZ2luLXRvcDoxMDBweDtcclxuICBmb250LXNpemU6IDNyZW07XHJcbiAgY29sb3I6JGMtYnJhbmQ7XHJcbn1cclxuXHJcblxyXG4uY2xlYXJmaXg6YWZ0ZXJ7XHJcbiAgY29udGVudDonJztcclxuICBkaXNwbGF5OiB0YWJsZTtcclxuICBjbGVhcjogYm90aDtcclxufVxyXG5cclxuYXtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuIl19 */

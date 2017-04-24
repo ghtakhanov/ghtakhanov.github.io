@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "number-leading-zero": null,
+    "value-no-vendor-prefix": true,
+    "at-rule-empty-line-before": "never",
+    "rule-non-nested-empty-line-before": "never"
+  }
+}

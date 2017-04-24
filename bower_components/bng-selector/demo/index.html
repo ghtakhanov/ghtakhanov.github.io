@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Angular select component extended with filter feature</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="bng-selector.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div class="container" ng-controller="demoController as ctrl">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>bng-selector - Angular selector component</h1>
+			<hr />
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h2>Simple selection: {{ctrl.simpleTitle}}</h2>
+			<bng-selector show-filter="false" empty-label="Choose an option" options="ctrl.options"
+						  on-select="ctrl.simpleOptionSelected(option)"
+						  on-unselect="ctrl.simpleOptionUnselected()"
+						  label="name" selected="ctrl.simpleOption">
+			</bng-selector>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h2>Simple selection with filter</h2>
+			<bng-selector show-filter="true" options="ctrl.options"
+						  on-select="ctrl.optionSelected(option)"
+						  on-unselect="ctrl.optionUnselected()"
+						  label="name" selected="ctrl.selected"
+						  disabled="ctrl.disabled">
+			</bng-selector>
+			<h3>Choice: {{ctrl.title}}</h3>
+			<p>
+				This is a demo for the angular component that I wrote. This component is useful to use in place
+				of regular html select input. It adds the capability to filter the available options to help
+				the user to find the desired item.
+			</p>
+			<h3>Simulate</h3>
+			<p>
+				<button class="btn btn-primary btn-sm" ng-click="ctrl.changeOptions()">Change options</button>
+				<button class="btn btn-primary btn-sm" ng-click="ctrl.changeSelected()">Change selected</button>
+				<button class="btn btn-primary btn-sm" ng-click="ctrl.disabled = !ctrl.disabled">Toggle disabled</button>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h2>Multi selection with filter</h2>
+			<bng-selector show-filter="true" multi="true" options="ctrl.options"
+						  on-select="ctrl.multiSelectionEvent(option)"
+						  on-unselect="ctrl.clearMulti()"
+						  label="name">
+			</bng-selector>
+			<h3>Selected items:</h3>
+			<ul>
+				<li ng-repeat="item in ctrl.selectedItems">{{item.name}}</li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h2>Multi selection with filter and pre-selection</h2>
+			<bng-selector show-filter="true" multi="true" options="ctrl.options"
+						  on-select="ctrl.multiPreSelectionEvent(option)"
+						  on-unselect="ctrl.clearMultiPre()"
+						  label="name" key="id" selected="ctrl.preSelectedItems">
+			</bng-selector>
+			<h3>Selected items:</h3>
+			<ul>
+				<li ng-repeat="item in ctrl.preSelectedItems">{{item.name}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+<script src="bng-selector.min.js"></script>
+<script>
+	(function() {
+		var demoApp = angular.module('demoApp', ['bng-selector']);
+
+		var demoController = function($timeout) {
+			var ctrl = this;
+
+			$timeout(function() {
+				ctrl.options = [
+					{id: 1, name: 'Bruno'}, {id: 2, name: 'Carolina'}, {id: 3, name: 'Danilo'}, {id: 4, name: 'Eduarda'},
+					{id: 5, name: 'Fernando'}, {id: 6, name: 'Gisele'}, {id: 7, name: 'Hilton'}, {id: 8, name: 'Inayara'},
+					{id: 9, name: 'João'}, {id: 10, name: 'Kimberly'}, {id: 11, name: 'Leandro'}, {id: 12, name: 'Maria Helena'}
+				];
+			}, 1000);
+
+			ctrl.changeOptions = function() {
+				ctrl.options = [
+					{id: 13, name: 'Natália'}, {id: 14, name: 'Otávio'}, {id: 15, name: 'Paula'}, {id: 16, name: 'Querubim'}
+				];
+			};
+
+			ctrl.changeSelected = function() {
+				ctrl.selected = {name: 'Gisele'};
+				ctrl.optionSelected(ctrl.selected);
+			};
+
+			ctrl.optionSelected = function(option) {
+				ctrl.title = option.name;
+			};
+
+			ctrl.optionUnselected = function() {
+				ctrl.title = 'No one!';
+			};
+
+			ctrl.simpleOptionSelected = function(option) {
+				ctrl.simpleTitle = option.name;
+			};
+
+			ctrl.simpleOptionUnselected = function() {
+				ctrl.simpleTitle = '';
+			};
+
+			ctrl.multiSelectionEvent = function(selectedItems) {
+				ctrl.selectedItems = selectedItems;
+			};
+
+			ctrl.multiPreSelectionEvent = function(preSelectedItems) {
+				ctrl.preSelectedItems = preSelectedItems;
+			};
+
+			ctrl.clearMulti = function() {
+				ctrl.selectedItems = [];
+			};
+
+			ctrl.clearMultiPre = function() {
+				ctrl.preSelectedItems = [];
+			};
+
+			ctrl.selectedItems = [];
+
+			ctrl.preSelectedItems = [
+				{id: 3, name: 'Danilo'}, {id: 6, name: 'Gisele'}, {id: 7, name: 'Hilton'}
+			];
+
+			ctrl.options = [
+				{id: 1, name: 'Bruno'}, {id: 4, name: 'Eduarda'},
+				{id: 9, name: 'João'}, {id: 10, name: 'Kimberly'}
+			];
+
+			ctrl.selected = {name: 'Bruno'};
+			ctrl.optionSelected(ctrl.selected);
+		};
+		demoApp.controller('demoController', demoController);
+	}());
+</script>
+</body>
+</html>

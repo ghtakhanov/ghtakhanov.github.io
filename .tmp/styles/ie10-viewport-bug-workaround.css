@@ -1,0 +1,13 @@
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport     { width: device-width; }
+@viewport         { width: device-width; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImllMTAtdmlld3BvcnQtYnVnLXdvcmthcm91bmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0dBSUc7O0FBRUg7OztHQUdHO0FBQ0gsb0JBQW9CLG9CQUFvQixFQUFFO0FBRTFDLG9CQUFvQixvQkFBb0IsRUFBRSIsImZpbGUiOiJpZTEwLXZpZXdwb3J0LWJ1Zy13b3JrYXJvdW5kLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxyXG4gKiBJRTEwIHZpZXdwb3J0IGhhY2sgZm9yIFN1cmZhY2UvZGVza3RvcCBXaW5kb3dzIDggYnVnXHJcbiAqIENvcHlyaWdodCAyMDE0LTIwMTUgVHdpdHRlciwgSW5jLlxyXG4gKiBMaWNlbnNlZCB1bmRlciBNSVQgKGh0dHBzOi8vZ2l0aHViLmNvbS90d2JzL2Jvb3RzdHJhcC9ibG9iL21hc3Rlci9MSUNFTlNFKVxyXG4gKi9cclxuXHJcbi8qXHJcbiAqIFNlZSB0aGUgR2V0dGluZyBTdGFydGVkIGRvY3MgZm9yIG1vcmUgaW5mb3JtYXRpb246XHJcbiAqIGh0dHA6Ly9nZXRib290c3RyYXAuY29tL2dldHRpbmctc3RhcnRlZC8jc3VwcG9ydC1pZTEwLXdpZHRoXHJcbiAqL1xyXG5ALW1zLXZpZXdwb3J0ICAgICB7IHdpZHRoOiBkZXZpY2Utd2lkdGg7IH1cclxuQC1vLXZpZXdwb3J0ICAgICAgeyB3aWR0aDogZGV2aWNlLXdpZHRoOyB9XHJcbkB2aWV3cG9ydCAgICAgICAgIHsgd2lkdGg6IGRldmljZS13aWR0aDsgfSJdfQ== */
